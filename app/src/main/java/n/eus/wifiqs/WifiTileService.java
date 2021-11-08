@@ -25,17 +25,17 @@ public class WifiTileService extends TileService implements WifiStateListener {
         switch (state) {
             case DISABLED:
                 tile.setIcon(Icon.createWithResource(this, R.drawable.disabled));
-                tile.setLabel("OFF");
+                tile.setLabel("WLAN");
                 tile.setState(Tile.STATE_INACTIVE);
                 break;
             case ENABLED:
                 tile.setIcon(Icon.createWithResource(this, R.drawable.enabled));
-                tile.setLabel("ON");
+                tile.setLabel("WLAN");
                 tile.setState(Tile.STATE_ACTIVE);
                 break;
             case CONNECTED:
                 tile.setIcon(Icon.createWithResource(this, R.drawable.connected));
-                tile.setLabel(ssid != null ? ssid : "CONNECTED");
+                tile.setLabel(ssid != null ? ssid : "WLAN");
                 tile.setState(Tile.STATE_ACTIVE);
                 break;
         }
